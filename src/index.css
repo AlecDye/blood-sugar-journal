@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto+Mono&display=swap');
+
+:root {
+  /* General Colors */
+  --clr-light: #fff;
+  --clr-bg: #eee;
+  --clr-dark: #333;
+  --clr-muted: #8b8b8b;
+  --clr-primary: #0275d8;
+
+  /* Glucose Status Colors */
+  --clr-low: #d9534f;
+  --clr-target: #5cb85c;
+  --clr-high: #f0ad4e;
+
+  /* Fonts */
+  --ff-number: 'Roboto Mono', monospace;
+  --ff-body: 'Montserrat', sans-serif;
+
+  --fw-normal: 400;
+  --fw-bold: 600;
+
+  /* Misc */
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --flow-space: 1em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul[class] {
+  padding: 0;
+}
+
+body, h1, h2, h3, p, ul[class], li {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Layout */
+.container {
+  padding: 0 0.75em;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--clr-light);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+/* Utility */
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+/* Components */
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-dark);
+  font-family: var(--ff-body);
+}
+
+/* Header */
+.header {
+  padding: 1.75em 2em;
+  margin-bottom: 1.5em;
+  background-color: var(--clr-light);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+/* EntryList */
+.entry-list__header {
+  padding: 1em 0;
+  margin-bottom: 1.5em;
+  border-bottom: 2px dashed var(--clr-dark);
+}
+
+/* EntryListItem */
+.upper {
+  display: flex;
+}
+
+.glucose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+  padding: 1em;
+  border-radius: 10px 0 0 0;
+  color: var(--clr-light);
+  font-family: var(--ff-number);
+  background-color: var(--clr-primary);
+}
+
+.glucose__number {
+  font-size: 2rem;
+}
+
+.glucose.low {
+  background-color: var(--clr-low);
+}
+
+.glucose.target {
+  background-color: var(--clr-target);
+}
+
+.glucose.high {
+  background-color: var(--clr-high);
+}
+
+.upper__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 70%;
+  padding: 0 1em;
+}
+
+.upper__content > p {
+  font-family: var(--ff-number);
+  font-size: 1.2rem;
+}
+
+.lower {
+  padding: 1em;
+}
+
+.notes-label {
+  font-weight: var(--fw-bold);
+}
+
+.no-notes {
+  text-align: center;
+  color: var(--clr-muted);
+}
+
+/* Footer */
+.footer {
+  padding: 3.5em 0 1.5em;
+  text-align: center;
 }
