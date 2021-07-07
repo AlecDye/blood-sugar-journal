@@ -4,6 +4,7 @@ import Header from "./components/UI/Header"
 import AddEntry from "./components/Entries/AddEntry";
 import EntryList from "./components/Entries/EntryList";
 import Footer from "./components/UI/Footer"
+import EntryForm from "./components/Entries/EntryForm";
 
 const ENTRY_DATA = [
   {
@@ -36,7 +37,8 @@ const App = () => {
     <>
       <Header />
       <main className="container">
-        <AddEntry />
+        <EntryForm />
+        {/* <AddEntry /> */}
         <EntryList entries={entries}/>
       </main>
       <Footer />
