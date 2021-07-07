@@ -70,10 +70,48 @@ input, button, textarea, select {
   box-shadow: var(--box-shadow);
 }
 
+.card-outline {
+  cursor: pointer;
+  padding: 0;
+  margin: 2em 0;
+  background-color: var(--clr-bg);
+  border: none;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.card-outline .glucose {
+  opacity: 0.5;
+}
+
 /* Utility */
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
 }
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.25em 0.75em;
+  border: none;
+  border-radius: 5px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-light)
+}
+
+.btn:hover, .btn:focus {
+  opacity: 0.7;
+  outline: dashed var(--clr-primary);
+  outline-offset: 2px;
+}
+
+
 
 /* Components */
 body {
@@ -97,9 +135,36 @@ body {
 
 /* EntryList */
 .entry-list__header {
-  padding: 1em 0;
+  padding: 0.75em 0;
   margin-bottom: 1.5em;
   border-bottom: 2px dashed var(--clr-dark);
+  font-size: 0.8rem;
+}
+
+/* AddEntry */
+.add-entry {
+  position: relative;
+}
+
+.add-entry-prompt {
+  position: absolute;
+  top: 2.2em;
+  left: 2em;
+  right: 2em;
+  bottom: 2em;
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  border: 2px solid var(--clr-dark);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.add-entry-prompt:hover, .add-entry-prompt:focus {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+  outline: dashed var(--clr-primary);
+  outline-offset: 2px;
 }
 
 /* EntryListItem */
@@ -117,11 +182,7 @@ body {
   border-radius: 10px 0 0 0;
   color: var(--clr-light);
   font-family: var(--ff-number);
-  background-color: var(--clr-primary);
-}
-
-.glucose__number {
-  font-size: 2rem;
+  background-color: var(--clr-muted);
 }
 
 .glucose.low {
@@ -134,6 +195,10 @@ body {
 
 .glucose.high {
   background-color: var(--clr-high);
+}
+
+.glucose__number {
+  font-size: 2rem;
 }
 
 .upper__content {
@@ -164,6 +229,7 @@ body {
 
 /* Footer */
 .footer {
+  position: ;
   padding: 3.5em 0 1.5em;
   text-align: center;
 }

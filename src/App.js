@@ -35,10 +35,10 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="container">
+      <main className="container">
         <AddEntry />
         <EntryList entries={entries}/>
-      </div>
+      </main>
       <Footer />
     </>
   );

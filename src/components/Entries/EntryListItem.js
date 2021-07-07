@@ -16,7 +16,7 @@ const EntryListItem = ({entry}) => {
         </div>
         <div className="upper__content">
           <p>{entry.time} {entry.date}</p>
-          <button className="btn btn-primary">Edit</button>
+          <button className="btn btn-primary" type="button">Edit</button>
         </div>
       </div>
       <div className="lower">
