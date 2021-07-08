@@ -16,7 +16,7 @@ const EntryForm = (props) => {
           <input type="time" step="min" defaultValue="00:00"/>
           <small>errorMsg</small>
           <label htmlFor="date">Date:</label>
-          <input type="date" min="2021-01-02"/>
+          <input type="date" min="2021-01-01" defaultValue="2021-01-01"/>
           <small>errorMsg</small>
         </div>
       </div>
