@@ -211,6 +211,49 @@ body {
   background-color: var(--clr-bg);
 }
 
+.form-upper {
+  display: flex;
+  align-items: center;
+}
+
+.form-upper .glucose {
+  padding: 0.6em;
+  flex-basis: 40%;
+}
+
+.glucose-label span {
+  display: block;
+  font-weight: var(--fw-bold);
+}
+
+.glucose-input {
+  width: 3em;
+  text-align: center;
+}
+
+.glucose-error {
+  margin-top: 0.3em;
+}
+
+.form-info {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-info > label {
+  margin-bottom: 0.5em;
+  font-weight: var(--fw-bold);
+}
+
+.form-info > input {
+  width: max-content;
+}
+
+.form-info input + label {
+  margin-top: 0.7em;
+}
+
 .form-notes {
   margin: 2em 0;
   padding: 0 0.5em;
