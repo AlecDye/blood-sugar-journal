@@ -28,7 +28,7 @@ const EntryForm = (props) => {
       <div className="btn-row">
         <button className="btn btn-delete" type="button">Delete</button>
         <div>
-          <button className="btn btn-outline" type="button">Cancel</button>
+          <button className="btn btn-outline" type="button" onClick={props.onCancel}>Cancel</button>
           <button className="btn btn-primary" type="submit">Save</button>
         </div>
       </div>

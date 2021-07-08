@@ -32,13 +32,22 @@ const ENTRY_DATA = [
 
 const App = () => {
   const [entries, setEnteries] = useState(ENTRY_DATA)
+  const [openForm, setOpenForm] = useState(false)
+
+  const openFormHandler = () => {
+    setOpenForm(true)
+  }
+
+  const cancelFormHandler = () => {
+    setOpenForm(false)
+  }
 
   return (
     <>
       <Header />
       <main className="container">
-        <EntryForm />
-        {/* <AddEntry /> */}
+        {!openForm && <AddEntry onFormOpen={openFormHandler}/>}
+        {openForm && <EntryForm onCancel={cancelFormHandler}/>}
         <EntryList entries={entries}/>
       </main>
       <Footer />
